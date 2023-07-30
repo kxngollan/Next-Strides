@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/logo.png" class="logo" alt="Business logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Social care for you</p>
+          <h1>Next Strides</h1>
+        </div>
+      </div>
+    </div>
+    <!--  About Section  -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              src="./images/about.jpg "
+              alt="Elderly woman being shown a phone"
+            />
+            <!--Needs to be changed to something portrait -->
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Us</h1>
+            <p>
+              We are a family run business that's all about putting family
+              first. We are here to look after you and your loved ones to ensure
+              the best care is given. Our motto is "Taking the NEXT STRIDE is
+              going above nad beyond."
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('live-in')">
+                Live-in Care
+              </p>
+              <p class="tab-links" onclick="opentab('domiciliary')">
+                Domiciliary Care
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="live-in">
+              <p>
+                Find the perfect career to come and stay with you. There to help
+                you with all your needs to enjoy your independence as much as
+                possible
+              </p>
+            </div>
+            <div class="tab-contents" id="domiciliary">
+              <p>
+                Need someone to come in for support day to day at a given time?
+                For Breakfast/Lunch/Dinner time. We are here to come and give
+                you a hand with any and all things you need during those time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Example 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              aliquid, facilis fugiat itaque eaque aspernatur quas repellat.
+            </p>
+          </div>
+          <div>
+            <h2>Example 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              aliquid, facilis fugiat itaque eaque aspernatur quas repellat.
+            </p>
+          </div>
+          <div>
+            <h2>Example 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              aliquid, facilis fugiat itaque eaque aspernatur quas repellat.
+            </p>
+          </div>
+          <div>
+            <h2>Example 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              aliquid, facilis fugiat itaque eaque aspernatur quas repellat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">Meet Our Team</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="./images/team/pexels-laura-james-6097936.jpg" />
+            <div class="layered">
+              <h3>Laura James</h3>
+              <p>
+                Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Sed, qui!
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/team/pexels-cottonbro-studio-5722166.jpg" />
+            <div class="layered">
+              <h3>Annetta Brown</h3>
+              <p>
+                Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Sed, qui!
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/team/pexels-antoni-shkraba-6749773.jpg" />
+            <div class="layered">
+              <h3>Antoni Shkraba</h3>
+              <p>
+                Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Sed, qui!
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/team/pexels-anna-tarazevich-7904410.jpg" />
+            <div class="layered">
+              <h3>Anna Tara</h3>
+              <p>
+                Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Sed, qui!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Us</h1>
+            <p>contact@example.co.uk</p>
+            <p>01267901223</p>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" required placeholder="Your Name" />
+              <input type="email" name="Email" placeholder="Your Email" />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Leave Your Message..."
+              ></textarea>
+              <button class="btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let tablinks = document.getElementsByClassName('tab-links');
+      let tabcontents = document.getElementsByClassName('tab-contents');
+
+      const opentab = (tabname) => {
+        for (tablink of tablinks) {
+          tablink.classList.remove('active-link');
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add('active-tab');
+      };
+    </script>
+  </body>
+</html>
